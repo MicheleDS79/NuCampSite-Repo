@@ -8,17 +8,16 @@ const carouselButton = document.getElementById('carouselButton');
 const faIcon = document.getElementById('faButton');
 
 
-carouselPause.addEventListener('click', function() {
+carouselButton.addEventListener('click', function() {
     if (faIcon.classList.contains('fa-pause')) {
         faIcon.classList.remove('fa-pause');
-        faiIcon.classList.add('fa-play');
+        faIcon.classList.add('fa-play');
         carousel.pause();
     } else {
         faIcon.classList.remove('fa-play');
         faIcon.classList.add('fa-pause');
         carousel.cycle();
     }
-    
 })
 
 // when the play button is clicked, begin cycling through the images
