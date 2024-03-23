@@ -26,7 +26,7 @@ async function fetchWeather(){
     let apiKey = process.env.OPEN_WEATHER_API_KEY;
     let city = "Columbus";
 
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric;`
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial;`
 
     let data = await fetch(url);
     let weatherData = await data.json();
