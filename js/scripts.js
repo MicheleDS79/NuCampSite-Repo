@@ -1,3 +1,5 @@
+console.log('javascript connected!')
+
 const carousel = new bootstrap.Carousel('#homeCarousel', {
     interval: 5000,
     pause: false
@@ -24,7 +26,7 @@ async function fetchWeather(){
     let apiKey = process.env.OPEN_WEATHER_API_KEY;
     let city = "Columbus";
 
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial;`
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric;`
 
     let data = await fetch(url);
     let weatherData = await data.json();
@@ -65,7 +67,7 @@ icon.appendChild(img);
 // when the play button is clicked, begin cycling through the images
 //const carouselPlay = document.getElementById('carouselPlay');
 //carouselPlay.addEventListener('click', function() {
-    //console.log('cycle the carousel');
+    //console.log('cycle the carousel')
     //carousel.cycle();
 //})
 
